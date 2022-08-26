@@ -29,37 +29,37 @@ void tableInitializer(int game_mode, TABLE* game){
 
     //medium mode
     }else if(game_mode == 1){
-         int bomb = 0;
-            for(int line = 0; line < 14; line++){
-                for(int column = 0; column < 18; column++){
-                    game->table[line][column] = 0;
-                }
+        int bomb = 0;
+        for(int line = 0; line < 14; line++){
+            for(int column = 0; column < 18; column++){
+                game->table[line][column] = 0;
             }
-            while(bomb < 40){
-                    int line = rand() % 14;
-                    int column = rand() % 18;
-                    if(game->table[line][column] == 0){
-                            game->table[line][column] = 1;
-                            bomb++;
-                    }else continue;
-            }
+        }
+        while(bomb < 40){
+            int line = rand() % 14;
+            int column = rand() % 18;
+            if(game->table[line][column] == 0){
+                game->table[line][column] = 1;
+                bomb++;
+            }else continue;
+        }
 
         //hard mode
         }else{
         int bomb = 0;
-            for(int line = 0; line < 20; line++){
-                for(int column = 0; column < 24; column++){
-                    game->table[line][column] = 0;
-                }
+        for(int line = 0; line < 20; line++){
+            for(int column = 0; column < 24; column++){
+                game->table[line][column] = 0;
             }
-            while(bomb < 99){
-                int line = rand() % 20;
-                int column = rand() % 24;
-                if(game->table[line][column] == 0){
-                    game->table[line][column] = 1;
-                    bomb++;
-                }else continue;
-            }
+        }
+        while(bomb < 99){
+            int line = rand() % 20;
+            int column = rand() % 24;
+            if(game->table[line][column] == 0){
+                game->table[line][column] = 1;
+                bomb++;
+            }else continue;
+        }
         }
 }
 
