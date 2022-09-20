@@ -1,1 +1,1 @@
-Personal project to study C, data structures and algorithms.
+Personal project to study C
